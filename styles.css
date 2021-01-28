@@ -1,0 +1,312 @@
+/*-----------------------------checkcbox--------------*/
+.custom-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 0;
+}
+.custom-checkbox > .form-check-input {
+  display: none;
+}
+.custom-checkbox > .custom-checkbox-text {
+  display: inline-block;
+  top: 0.1rem;
+  position: absolute;
+  padding-bottom: 0.5rem;
+}
+.custom-checkbox > .form-check-label {
+  border-radius: 0.5rem;
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  box-shadow: inset 1.5px 1.5px 2px 1px #dadada, inset -2px -2px 0px 0px #f7f7f7;
+}
+.custom-checkbox > .form-check-label:after {
+  position: absolute;
+  top: 1rem;
+  left: 0.45rem;
+  display: block;
+  width: 0.5rem;
+  height: 0.9rem;
+  content: "";
+  border-top: 2px solid #f2f2f2;
+  border-right: 2px solid #f2f2f2;
+  -webkit-transform: scaleX(-1) rotate(138deg);
+  -moz-transform: scaleX(-1) rotate(138deg);
+  -ms-transform: scaleX(-1) rotate(138deg);
+  transform: scaleX(-1) rotate(138deg);
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.custom-checkbox > .form-check-input:checked + .form-check-label {
+  background: #f2f2f2;
+  border: none;
+  box-shadow: 2px 2px 2px 1px #dadada, -4px -3px 0px 0px #f7f7f7;
+}
+
+.custom-checkbox > .form-check-input:checked + .form-check-label:after {
+  border-color: #009ec0;
+}
+
+.custom-checkbox > span.custom-checkbox-text {
+  position: relative;
+  top: 0.125rem;
+  font-size: 1rem;
+}
+.custom-checkbox > .form-check-input:disabled + .form-check-label {
+  background: #dbdbdb;
+  border: 1px solid #dbdbdb;
+  box-shadow: inset 1.5px 1.5px 2px 1px #cdcdcd, inset 0px 0px 0px 0px #f7f7f7;
+}
+.custom-checkbox > .form-check-input:disabled + .form-check-label:after {
+  border-color: #9d9d9d;
+  left: 0.45rem;
+}
+/*-----------------------------radio button--------------*/
+.custom-radio {
+  display: block;
+  position: relative;
+  padding-left: 0rem;
+}
+
+.custom-radio > label {
+  display: inline-block;
+  position: relative;
+  top: 0.1rem;
+  font-size: 1rem;
+}
+
+.custom-radio > input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  outline: 0;
+  margin-right: 0.4rem;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  position: relative;
+  border: 1px solid #f2f2f2;
+  background: #f2f2f2;
+  box-shadow: inset 1.5px 1.5px 2px 1px #dadada, inset -2px -2px 0px 0px #f7f7f7;
+}
+
+.custom-radio > .form-check-input:checked {
+  background: #f2f2f2;
+  box-shadow: 2px 2px 2px 1px #dadada, -2px -2px 0px 0px #f7f7f7;
+}
+.custom-radio > .form-check-input:disabled {
+  background: #dedede;
+  box-shadow: inset 1px 1px 2px 1px #b7b7b7;
+}
+.custom-radio > input[type="radio"]:before {
+  content: "";
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  background: #9d9d9d;
+  left: 50%;
+  top: 50%;
+  border-radius: 100%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s cubic-bezier(0.52, -0.5, 0.5, 1.5);
+}
+.custom-radio > input[type="radio"]:disabled:before {
+  transform: translate(-50%, -50%) scale(1);
+  background: #9d9d9d !important;
+}
+.custom-radio > input[type="radio"]:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+  background: #009ec0;
+}
+/*-------------------------------switchbox-------------------------*/
+.switch.checkbox-switch {
+  padding-left: 0;
+}
+
+.switch.checkbox-switch label,
+.checkbox-inline.checkbox-switch {
+  font-size: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+  position: relative;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.switch.checkbox-switch label input,
+.checkbox-inline.checkbox-switch input {
+  display: none;
+}
+
+.switch.checkbox-switch label span,
+.checkbox-inline.checkbox-switch span {
+  width: 2.25rem;
+  border-radius: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #dbdbdb;
+  background-color: #f2f2f2;
+  border-color: rgb(223, 223, 223);
+  box-shadow: inset 1.5px 1.5px 2px 1px #dadada, inset -2px -2px 0px 0px #f7f7f7;
+  transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.switch.checkbox-switch label span:before,
+.checkbox-inline.checkbox-switch span:before {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  content: " ";
+  top: -1px;
+  position: relative;
+  left: -10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.switch.checkbox-switch label > input:checked + span:before,
+.checkbox-inline.checkbox-switch > input:checked + span:before {
+  left: 22px;
+}
+
+.switch.checkbox-switch.switch-success label > input:checked + span,
+.checkbox-inline.checkbox-switch.switch-success > input:checked + span {
+  background-color: #009ec0;
+  border-color: #009ec0;
+  box-shadow: inset 1px 1px 0px 1px #0188a6;
+  transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s,
+    background-color 1.2s ease 0s;
+}
+
+.switch.checkbox-switch.switch-success label > input:checked:disabled + span,
+.checkbox-inline.checkbox-switch.switch-success
+  > input:checked:disabled
+  + span {
+  background-color: lighten(#009ec0, 30%);
+  border-color: lighten(#009ec0, 30%);
+  box-shadow: lighten(#009ec0, 30%) 0px 0px 0px 8px inset;
+}
+.switch.checkbox-switch.switch-success label > input:disabled + span,
+.checkbox-inline.checkbox-switch.switch-success > input:disabled + span {
+  background: #dedede;
+  box-shadow: inset 1px 1px 2px 1px #b7b7b7;
+}
+/*----------------------------------btn-------------------------*/
+.click_btn {
+  padding: 15px 40px;
+  border-radius: 10px;
+  border: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.normal_btn {
+  box-shadow: 2px 2px 2px 1px #dadada, -2px -2px 9px 7px #f7f7f7;
+}
+.focused_btn {
+  border: 2px solid #009ec0;
+  color: #009ec0;
+  box-shadow: 2px 2px 2px 1px #dadada, -2px -2px 9px 7px #f7f7f7;
+}
+
+.pressed_btn {
+  color: #ccc;
+  box-shadow: inset 1.5px 1.5px 5px 2px #dadada, inset -2px -2px 0px 0px #f7f7f7;
+}
+.disabled_btn {
+  color: #fff;
+  box-shadow: inset 1.5px 1.5px 16px 1px #cdcdcd, inset 0px 0px 0px 0px #f7f7f7;
+  background: #e8e8e8;
+}
+/*----------------------------input type text---------------------------------*/
+.textfield {
+  padding: 15px 0px 15px 15px;
+  border-radius: 50px;
+  border: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 95%;
+  background: #f2f2f2;
+  outline: 0;
+}
+::placeholder {
+  color: #ccc;
+}
+.normal_input {
+  box-shadow: inset 1.5px 1.5px 2px 3px #dadada, inset -3px -3px 0px 0px #f7f7f7;
+}
+.normal_input:focus,
+.focused_input {
+  box-shadow: inset 1.5px 1.5px 2px 3px #dadada, inset -3px -3px 0px 0px #f7f7f7;
+  border: 2px solid #009ec0;
+}
+/*--------------------------------*/
+.container_1 {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 7px 2px #dadada, -4px -2px 6px 3px #fff;
+  background: #f2f2f2;
+  width: 45%;
+  margin: 20px auto;
+}
+.container_2 {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 7px 2px #dadada, -4px -2px 6px 3px #fff;
+  background: #f2f2f2;
+  width: 45%;
+  margin: 20px auto;
+}
+.container_3 {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 7px 2px #dadada, -4px -2px 6px 3px #fff;
+  background: #f2f2f2;
+  width: 45%;
+  margin: 20px 20px;
+}
+.main_container {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: space-around;*/
+}
+.flex_box_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.flex_box_2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+h3 {
+  margin: 0px;
+  width: 50%;
+  text-align: left;
+  font-size: 25px;
+}
+.btn {
+  width: 10%;
+  text-align: left;
+}
+body {
+  background: #f2f2f2;
+}
